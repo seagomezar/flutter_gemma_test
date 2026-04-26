@@ -1,6 +1,6 @@
 # Flutter Gemma Test App
 
-A Flutter application demonstrating how to integrate and run Google's **Gemma 4 / SmolLM** models entirely locally on-device using the `flutter_gemma` plugin.
+A Flutter application demonstrating how to integrate and run Google's **Gemma 4 ** models entirely locally on-device using the `flutter_gemma` plugin.
 
 ## Features
 - **Local AI Inference**: Runs Large Language Models (LLMs) completely offline using MediaPipe underneath.
@@ -26,7 +26,6 @@ The following permissions are configured in `android/app/src/main/AndroidManifes
 <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 ```
-*(An optional `network_security_config.xml` is also included to bypass local SSL inspection issues on certain corporate networks like Zscaler).*
 
 ## How to Run
 

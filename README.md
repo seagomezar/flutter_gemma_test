@@ -34,9 +34,6 @@ The following permissions are configured in `android/app/src/main/AndroidManifes
 2. Run `flutter pub get` to install dependencies.
 3. Run the app on a physical device or emulator using `flutter run`.
 
-### Note on Corporate Networks (Zscaler, etc.)
-If you are on a corporate network that uses SSL interception (like Zscaler), the automated model download may fail with a `CertPathValidatorException` (Trust anchor not found). If this happens, you will need to either bypass the proxy or manually download the model via browser and push it to the app's internal storage (`/data/user/0/com.example.flutter_gemma_test/app_flutter/`).
-
 ## Tech Stack
 - **Flutter** & **Dart**
 - **[flutter_gemma](https://pub.dev/packages/flutter_gemma)**: Core inference engine.

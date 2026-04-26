@@ -49,10 +49,10 @@ class _InitializationScreenState extends State<InitializationScreen> {
         _progress = 0;
       });
       await FlutterGemma.installModel(
-        modelType: ModelType.deepSeek, // Using deepSeek for SmolLM
+        modelType: ModelType.gemmaIt, // Using gemmaIt for Gemma models
       ).fromNetwork(
-        'https://huggingface.co/litert-community/SmolLM-135M-Instruct/resolve/main/model.task',
-        foreground: false,
+        'https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm/resolve/main/gemma-4-E2B-it.litertlm',
+        foreground: true,
       ).withProgress((progress) {
         setState(() {
           _progress = progress;
@@ -158,9 +158,9 @@ class _ChatScreenState extends State<ChatScreen> {
 
   Future<void> _initChat() async {
     _model = await FlutterGemma.getActiveModel(maxTokens: 2048);
-    _chat = await _model!.createChat(isThinking: false, modelType: ModelType.deepSeek);
+    _chat = await _model!.createChat(isThinking: true, modelType: ModelType.gemmaIt);
     setState(() {
-      _messages.add(ChatMessage(text: "Hello! I am SmolLM. How can I help you today?", isUser: false));
+      _messages.add(ChatMessage(text: "Hello! I am Gemma 4. How can I help you today?", isUser: false));
     });
   }
 
